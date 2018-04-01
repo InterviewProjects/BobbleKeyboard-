@@ -447,6 +447,8 @@ public class SoftKeyboard extends InputMethodService
                 caps = getCurrentInputConnection().getCursorCapsMode(attr.inputType);
             }
             mInputView.setShifted(mCapsLock || caps != 0);
+            mCurKeyboard.setShiftIcon(mCapsLock || mInputView.isShifted() ?
+                    getResources().getDrawable(R.drawable.sym_keyboard_shift_on) : getResources().getDrawable(R.drawable.sym_keyboard_shift_off));
         }
     }
 
@@ -599,6 +601,8 @@ public class SoftKeyboard extends InputMethodService
             // Alphabet keyboard
             checkToggleCapsLock();
             mInputView.setShifted(mCapsLock || !mInputView.isShifted());
+            mCurKeyboard.setShiftIcon(mCapsLock || mInputView.isShifted() ?
+                    getResources().getDrawable(R.drawable.sym_keyboard_shift_on) : getResources().getDrawable(R.drawable.sym_keyboard_shift_off));
         } else if (currentKeyboard == mSymbolsKeyboard) {
             mSymbolsKeyboard.setShifted(true);
             setLatinKeyboard1(mSymbolsShiftedKeyboard);
@@ -647,7 +651,7 @@ public class SoftKeyboard extends InputMethodService
     }
     private void checkToggleCapsLock() {
         long now = System.currentTimeMillis();
-        if (mLastShiftTime + 800 > now) {
+        if (mLastShiftTime + 300 > now) {
             mCapsLock = !mCapsLock;
             mLastShiftTime = 0;
         } else {

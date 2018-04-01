@@ -14,6 +14,7 @@ import com.example.noone.mybobblekeyboard.R;
 public class LatinKeyboard1 extends Keyboard {
     private Key mEnterKey;
     private Key mSpaceKey;
+    private Key mShiftKey;
     /**
      * Stores the current state of the mode change key. Its width will be dynamically updated to
      * match the region of {@link #mModeChangeKey} when {@link #mModeChangeKey} becomes invisible.
@@ -59,6 +60,8 @@ public class LatinKeyboard1 extends Keyboard {
         } else if (key.codes[0] == LatinKeyboardView.KEYCODE_LANGUAGE_SWITCH) {
             mLanguageSwitchKey = key;
             mSavedLanguageSwitchKey = new LatinKey(res, parent, x, y, parser);
+        } else if (key.codes[0] == -1) {
+            mShiftKey = key;
         }
         return key;
     }
@@ -123,6 +126,13 @@ public class LatinKeyboard1 extends Keyboard {
             mSpaceKey.icon = icon;
         }
     }
+
+    void setShiftIcon(Drawable icon) {
+        if (mShiftKey != null) {
+            mShiftKey.icon = icon;
+        }
+    }
+
     static class LatinKey extends Keyboard.Key {
 
         public LatinKey(Resources res, Keyboard.Row parent, int x, int y,

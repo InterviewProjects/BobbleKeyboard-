@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "358039777937",
+    "firebase_url": "https://mybobblekeyboard.firebaseio.com",
+    "project_id": "mybobblekeyboard",
+    "storage_bucket": "mybobblekeyboard.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:358039777937:android:4f37313e37cc23b9",
+        "android_client_info": {
+          "package_name": "com.example.noone.mybobblekeyboard"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "358039777937-qe2sdpc8jo2eo49pdq5i7hcuhh21omv6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.noone.mybobblekeyboard",
+            "certificate_hash": "98549f45e1068c0c61331af4c76a489df6feeea4"
+          }
+        },
+        {
+          "client_id": "358039777937-k2q0r9j3moqqqpgklmrdjfud9e7mg5im.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB3khlT2msKFDtdcA79NvCN63FGGyeUfkg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "358039777937-k2q0r9j3moqqqpgklmrdjfud9e7mg5im.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
